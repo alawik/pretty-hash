@@ -19,7 +19,7 @@ func isBuffer(b buf) bool {
 }
 
 func PrettyHash (b buf) string {
-    if isBuffer(b) && b.Len() > 8 {
+    if isBuffer(b) {
         if b.Len() > 8 {
             buf := hex.EncodeToString(b.Bytes())
             return buf[0:6] + ".." + buf[len(buf)-2:]
