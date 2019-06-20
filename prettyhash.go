@@ -3,7 +3,6 @@ package prettyhash
 import (
 	"bytes"
 	"fmt"
-	//"os"
     "reflect"
     "encoding/hex"
 )
@@ -32,11 +31,9 @@ func PrettyHash (b buf) string {
     }
 }
 
-
 func main() {
 	var b buf
 	b.Write([]byte("Hello World!"))
 
     fmt.Printf(PrettyHash(b))
-
 }
