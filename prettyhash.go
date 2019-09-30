@@ -2,7 +2,6 @@ package prettyhash
 
 import (
 	"bytes"
-	"fmt"
     "reflect"
     "encoding/hex"
 )
@@ -17,7 +16,7 @@ func isBuffer(b buf) bool {
     }
 }
 
-func PrettyHash (b buf) string {
+func PrettyHash(b buf) string {
     if isBuffer(b) {
         if b.Len() > 8 {
             buf := hex.EncodeToString(b.Bytes())
@@ -29,11 +28,4 @@ func PrettyHash (b buf) string {
     } else {
         return "Not a hash"
     }
-}
-
-func main() {
-	var b buf
-	b.Write([]byte("Hello World!"))
-
-    fmt.Printf(PrettyHash(b))
 }
