@@ -19,11 +19,10 @@ func TestIsBuffer(t *testing.T) {
 }
 
 func TestPrettyHash(t *testing.T) {
-	sum := sha256.Sum256([]byte("This Will Be A Hash"))
-	var hash []byte = sum[:]
+	hash := sha256.Sum256([]byte("This Will Be A Hash"))
 
 	var b bytes.Buffer
-	b.Write([]byte(hash))
+	b.Write([]byte(hash[:]))
 
 	buf := hex.EncodeToString(b.Bytes())
 
