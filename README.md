@@ -12,7 +12,7 @@ import (
     "fmt"
     "bytes"
     "crypto/sha256"
-    "github.com/alawik/pretty-hash"
+    . "github.com/alawik/pretty-hash"
 )
 
 func main() {
@@ -22,7 +22,7 @@ func main() {
     b.Write(sum[:])
 
     fmt.Printf("%x\n", sum)
-    fmt.Println(prettyhash.PrettyHash(b))
+    fmt.Println(PrettyHash(b))
 }
 ```
 
